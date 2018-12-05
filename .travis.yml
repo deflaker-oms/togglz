@@ -9,8 +9,8 @@ before_install:
   - export PATH=$M2_HOME/bin:$PATH
 
 
-install:
-  - "mvn -P ${CONTAINER} -DJBOSS_REPO=true -DskipTests=true -B install"
+install: true
+#   - "mvn -P ${CONTAINER} -DJBOSS_REPO=true -DskipTests=true -B install"
 script:
 #   - "mvn -P ${CONTAINER} -DJBOSS_REPO=true test"
   - "mvn -P ${CONTAINER} -DJBOSS_REPO=true verify"
