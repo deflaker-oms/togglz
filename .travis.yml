@@ -13,7 +13,7 @@ install: true
 #   - "mvn -P ${CONTAINER} -DJBOSS_REPO=true -DskipTests=true -B install"
 script:
 #   - "mvn -P ${CONTAINER} -DJBOSS_REPO=true test"
-  - "mvn -P ${CONTAINER} -DJBOSS_REPO=true verify"
+  - "mvn -B -P ${CONTAINER} -DJBOSS_REPO=true verify"
 after_success:
   - "bash .travis-sonatype-deploy.sh"
 jdk:
